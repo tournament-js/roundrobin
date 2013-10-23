@@ -2,12 +2,16 @@
   "name": "roundrobin",
   "description": "A round-robin scheduler used in different tournaments",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "clux/roundrobin"
   },
-  "keywords": ["round", "robin", "tournament"],
+  "keywords": [
+    "round",
+    "robin",
+    "tournament"
+  ],
   "main": "robin.js",
   "scripts": {
     "test": "tap test/*.js"
