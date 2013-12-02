@@ -1,4 +1,7 @@
-# Round Robin [![Build Status](https://secure.travis-ci.org/clux/roundrobin.png)](http://travis-ci.org/clux/roundrobin) [![Dependency Status](https://david-dm.org/clux/roundrobin.png)](https://david-dm.org/clux/roundrobin)
+# Round Robin
+[![Build Status](https://secure.travis-ci.org/clux/roundrobin.png)](http://travis-ci.org/clux/roundrobin)
+[![Dependency Status](https://david-dm.org/clux/roundrobin.png)](https://david-dm.org/clux/roundrobin)
+[![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 A simple round robin match scheduler to aid tournament implementations. The round robin implementation is [translated directly from the idea outlined on wikipedia](http://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm).
 
