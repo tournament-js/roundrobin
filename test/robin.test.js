@@ -1,9 +1,7 @@
-var tap = require('tap')
-  , test = tap.test
-  , $ = require('interlude')
+var $ = require('interlude')
   , robin = require('../');
 
-test("robin", function (t) {
+exports.robin = function (t) {
   $.range(20).forEach(function (n) {
     var rs = robin(n);
     var expected = ($.odd(n)) ? n : n-1;
@@ -36,5 +34,5 @@ test("robin", function (t) {
       t.deepEqual(val, exp, "player " + p + " plays every enemy");
     });
   });
-  t.end();
-});
+  t.done();
+};
