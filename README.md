@@ -5,7 +5,7 @@
 [![coverage status](http://img.shields.io/coveralls/clux/roundrobin.svg)](https://coveralls.io/r/clux/roundrobin)
 [![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
-A simple round robin match scheduler to aid tournament implementations. The round robin implementation is [translated directly from the idea outlined on wikipedia](http://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm).
+A simple round robin tournament match scheduler using the standard [scheduling algorithm](http://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm).
 
 ## Usage
 Simply give the number of players (with an optional players array), and it will spit out the array of rounds necessary:
