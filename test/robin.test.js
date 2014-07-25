@@ -1,5 +1,5 @@
 var $ = require('interlude')
-  , robin = require('../');
+  , robin = require(process.env.ROBIN_COV ? '../robin-cov.js' : '../');
 
 exports.robin = function (t) {
   $.range(20).forEach(function (n) {
