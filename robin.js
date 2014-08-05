@@ -8,6 +8,8 @@ module.exports = function (n, ps) {  // n = num players
     for (var k = 1; k <= n; k += 1) {
       ps.push(k);
     }
+  } else {
+    ps = ps.slice();
   }
 
   if (n % 2 === 1) {
