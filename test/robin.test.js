@@ -36,3 +36,32 @@ exports.robin = function (t) {
   });
   t.done();
 };
+
+exports.names = function (t) {
+  var ps = ['clux', 'lockjaw', 'pibbz', 'xeno', 'e114', 'eclipse'];
+  var pscopy = ps.slice();
+  t.deepEqual(robin(6, ps), [
+      [ [ 'clux', 'eclipse' ], [ 'lockjaw', 'e114' ], [ 'pibbz', 'xeno' ] ],
+      [ [ 'clux', 'e114' ], [ 'eclipse', 'xeno' ], [ 'lockjaw', 'pibbz' ] ],
+      [ [ 'clux', 'xeno' ], [ 'e114', 'pibbz' ], [ 'eclipse', 'lockjaw' ] ],
+      [ [ 'clux', 'pibbz' ], [ 'xeno', 'lockjaw' ], [ 'e114', 'eclipse' ] ],
+      [ [ 'clux', 'lockjaw' ], [ 'pibbz', 'eclipse' ], [ 'xeno', 'e114' ] ]
+    ], "expected even output"
+  );
+  t.deepEqual(ps, pscopy, 'have not modified even input');
+
+  ps.pop();
+  pscopy = ps.slice();
+  t.deepEqual(robin(5, ps), [
+      [ [ 'lockjaw', 'e114' ], [ 'pibbz', 'xeno' ] ],
+      [ [ 'clux', 'e114' ], [ 'lockjaw', 'pibbz' ] ],
+      [ [ 'clux', 'xeno' ], [ 'e114', 'pibbz' ] ],
+      [ [ 'clux', 'pibbz' ], [ 'xeno', 'lockjaw' ] ],
+      [ [ 'clux', 'lockjaw' ], [ 'xeno', 'e114' ] ]
+    ], 'expected odd output'
+  );
+
+  t.deepEqual(ps, pscopy, 'have not modified odd input');
+
+  t.done();
+};
