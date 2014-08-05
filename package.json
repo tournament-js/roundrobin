@@ -2,7 +2,7 @@
   "name": "roundrobin",
   "description": "A round-robin scheduler used in different tournaments",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "stability": "stable",
   "repository": {
     "type": "git",
