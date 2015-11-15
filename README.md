@@ -3,7 +3,6 @@
 [![build status](https://secure.travis-ci.org/clux/roundrobin.svg)](http://travis-ci.org/clux/roundrobin)
 [![dependency status](https://david-dm.org/clux/roundrobin.svg)](https://david-dm.org/clux/roundrobin)
 [![coverage status](http://img.shields.io/coveralls/clux/roundrobin.svg)](https://coveralls.io/r/clux/roundrobin)
-[![stable](http://img.shields.io/badge/stability-stable-74C614.svg)](http://nodejs.org/api/documentation.html#documentation_stability_index)
 
 A simple round robin tournament match scheduler using the standard [scheduling algorithm](http://en.wikipedia.org/wiki/Round-robin_tournament#Scheduling_algorithm).
 
@@ -32,7 +31,7 @@ robin(6, ['clux', 'lockjaw', 'pibbz', 'xeno', 'e114', 'eclipse']);
 Install from npm:
 
 ```bash
-$ npm install roundrobin --save
+$ npm install roundrobin
 ```
 
 ## License

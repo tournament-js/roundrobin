@@ -3,7 +3,6 @@
   "description": "A round-robin scheduler used in different tournaments",
   "author": "Eirik Albrigtsen <analsandblaster@gmail.com>",
   "version": "1.0.2",
-  "stability": "stable",
   "repository": {
     "type": "git",
     "url": "clux/roundrobin"
@@ -16,14 +15,12 @@
   "main": "robin.js",
   "scripts": {
     "test": "nodeunit --reporter=verbose test/*.js",
-    "coverage": "jscoverage robin.js && ROBIN_COV=1 nodeunit --reporter=lcov test",
-    "coveralls": "npm run coverage | coveralls"
+    "coverage": "jscoverage robin.js && ROBIN_COV=1 nodeunit --reporter=lcov test"
   },
   "dependencies": {},
   "devDependencies": {
     "nodeunit": "~0.9.0",
     "jscoverage": "~0.5.4",
-    "coveralls": "~2.11.1",
     "interlude": "~1.0.2"
   },
   "bugs": {
