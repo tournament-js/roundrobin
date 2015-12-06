@@ -14,13 +14,14 @@
   ],
   "main": "robin.js",
   "scripts": {
-    "test": "nodeunit --reporter=verbose test/*.js",
-    "coverage": "jscoverage robin.js && ROBIN_COV=1 nodeunit --reporter=lcov test"
+    "test": "bndg test/*.js",
+    "precoverage": "istanbul cover bndg test/*.test.js",
+    "coverage": "cat coverage/lcov.info && rm -rf coverage"
   },
   "dependencies": {},
   "devDependencies": {
-    "nodeunit": "~0.9.0",
-    "jscoverage": "~0.5.4",
+    "bandage": "^0.4.0",
+    "istanbul": "^0.4.1",
     "interlude": "~1.0.2"
   },
   "bugs": {
