@@ -42,9 +42,9 @@ test('names', function *(t) {
   var pscopy = ps.slice();
   t.eq(robin(6, ps), [
     [ [ 'clux', 'eclipse' ], [ 'lockjaw', 'e114' ], [ 'pibbz', 'xeno' ] ],
-    [ [ 'clux', 'e114' ], [ 'eclipse', 'xeno' ], [ 'lockjaw', 'pibbz' ] ],
+    [ [ 'e114', 'clux' ], [ 'eclipse', 'xeno' ], [ 'lockjaw', 'pibbz' ] ],
     [ [ 'clux', 'xeno' ], [ 'e114', 'pibbz' ], [ 'eclipse', 'lockjaw' ] ],
-    [ [ 'clux', 'pibbz' ], [ 'xeno', 'lockjaw' ], [ 'e114', 'eclipse' ] ],
+    [ [ 'pibbz', 'clux', ], [ 'xeno', 'lockjaw' ], [ 'e114', 'eclipse' ] ],
     [ [ 'clux', 'lockjaw' ], [ 'pibbz', 'eclipse' ], [ 'xeno', 'e114' ] ] ],
     'expected even output'
   );
@@ -54,9 +54,9 @@ test('names', function *(t) {
   pscopy = ps.slice();
   t.eq(robin(5, ps), [
     [ [ 'lockjaw', 'e114' ], [ 'pibbz', 'xeno' ] ],
-    [ [ 'clux', 'e114' ], [ 'lockjaw', 'pibbz' ] ],
+    [ [ 'e114', 'clux' ], [ 'lockjaw', 'pibbz' ] ],
     [ [ 'clux', 'xeno' ], [ 'e114', 'pibbz' ] ],
-    [ [ 'clux', 'pibbz' ], [ 'xeno', 'lockjaw' ] ],
+    [ [ 'pibbz', 'clux' ], [ 'xeno', 'lockjaw' ] ],
     [ [ 'clux', 'lockjaw' ], [ 'xeno', 'e114' ] ] ],
     'expected odd output'
   );
