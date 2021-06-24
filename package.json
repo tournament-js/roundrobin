@@ -2,7 +2,7 @@
   "name": "roundrobin",
   "description": "A round-robin scheduler used in different tournaments",
   "author": "Eirik Albrigtsen <sszynrae@gmail.com>",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "clux/roundrobin"
