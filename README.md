@@ -27,6 +27,13 @@ robin(6, ['clux', 'lockjaw', 'pibbz', 'xeno', 'e114', 'eclipse']);
   [ [ 'clux', 'lockjaw' ], [ 'pibbz', 'eclipse' ], [ 'xeno', 'e114' ] ] ]
 ```
 
+### Home/Away Matches
+In version `2.0.0` or greater, the outputted order of the match arrays denote which player is "home" or "away":
+```js
+[ 'away', 'home' ] // index 0 is away and index 1 is home
+```
+This can be used to indicate home/away in sports, white/black in chess, etc.
+
 ## Installation
 Install from npm:
 
