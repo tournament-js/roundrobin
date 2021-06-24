@@ -21,8 +21,10 @@ module.exports = function (n, ps) {  // n = num players
     for (let i = 0; i < n / 2; i += 1) {
       const o = n - 1 - i;
       if (ps[i] !== DUMMY && ps[o] !== DUMMY) {
-        const iHome = i === 0 && j % 2 === 1;
-        rs[j].push([iHome ? ps[o] : ps[i], iHome ? ps[i] : ps[o]]); // insert pair as a match - [ away, home ]
+        // flip orders to ensure everyone gets roughly n/2 home matches
+        const isHome = i === 0 && j % 2 === 1;
+        // insert pair as a match - [ away, home ]
+        rs[j].push([isHome ? ps[o] : ps[i], isHome ? ps[i] : ps[o]]);
       }
     }
     ps.splice(1, 0, ps.pop()); // permutate for next round

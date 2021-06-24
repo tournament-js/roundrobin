@@ -5,7 +5,7 @@ var $ = require('interlude')
 test('robin', function *(t) {
   $.range(20).forEach(function (n) {
     var rs = robin(n);
-    var expected = ($.odd(n)) ? n : n-1;
+    var expected = $.odd(n) ? n : n-1;
     t.eq(expected, rs.length, 'correct number of rounds');
 
     var pMaps = [];
@@ -75,7 +75,7 @@ test('home-away', function *(t) {
       }
     }
 
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i += 1) {
       const isOddPlayer = i % 2 === 1;
       const fairAmount = (n - 1) / 2;
       const [ roundedUp, roundedDown ] = [ Math.ceil(fairAmount), Math.floor(fairAmount) ];
@@ -95,4 +95,4 @@ test('home-away', function *(t) {
 
   hasCorrectHomeAwayOutput(9);
   hasCorrectHomeAwayOutput(10);
-})
+});
