@@ -1,6 +1,6 @@
 # Round Robin
 [![npm status](http://img.shields.io/npm/v/roundrobin.svg)](https://www.npmjs.org/package/roundrobin)
-[![build status](https://secure.travis-ci.org/clux/roundrobin.svg)](http://travis-ci.org/clux/roundrobin)
+[![build status](https://github.com/clux/roundrobin/actions/workflows/ci.yml/badge.svg)](https://github.com/clux/roundrobin/actions/workflows/ci.yml)
 [![dependency status](https://david-dm.org/clux/roundrobin.svg)](https://david-dm.org/clux/roundrobin)
 [![coverage status](http://img.shields.io/coveralls/clux/roundrobin.svg)](https://coveralls.io/r/clux/roundrobin)
 
