@@ -62,3 +62,37 @@ test('names', function *(t) {
   );
   t.eq(ps, pscopy, 'have not modified odd input');
 });
+
+test('home-away', function *(t) {
+  function hasCorrectHomeAwayOutput(n) {
+    const awayPlayers = [];
+    const homePlayers = [];
+
+    for (const round of robin(n)) {
+      for (const match of round) {
+        awayPlayers.push(match[0]);
+        homePlayers.push(match[1]);
+      }
+    }
+
+    for (let i = 1; i <= n; i++) {
+      const isOddPlayer = i % 2 === 1;
+      const fairAmount = (n - 1) / 2;
+      const [ roundedUp, roundedDown ] = [ Math.ceil(fairAmount), Math.floor(fairAmount) ];
+      const [ awayAmount, homeAmount ] = isOddPlayer ? [ roundedUp, roundedDown ] : [ roundedDown, roundedUp ];
+      t.eq(
+        awayPlayers.filter(player => player === i).length,
+        awayAmount,
+        `player ${i} of ${n} plays the correct amount of away matches (${awayAmount})`
+      );
+      t.eq(
+        homePlayers.filter(player => player === i).length,
+        homeAmount,
+        `player ${i} of ${n} plays the correct amount of home matches (${homeAmount})`
+      );
+    }
+  }
+
+  hasCorrectHomeAwayOutput(9);
+  hasCorrectHomeAwayOutput(10);
+})
