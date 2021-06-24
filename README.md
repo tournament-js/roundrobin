@@ -13,19 +13,26 @@ Simply give the number of players (with an optional players array), and it will 
 var robin = require('roundrobin');
 robin(6);
 [ [ [ 1, 6 ], [ 2, 5 ], [ 3, 4 ] ],
-  [ [ 1, 5 ], [ 6, 4 ], [ 2, 3 ] ],
+  [ [ 5, 1 ], [ 6, 4 ], [ 2, 3 ] ],
   [ [ 1, 4 ], [ 5, 3 ], [ 6, 2 ] ],
-  [ [ 1, 3 ], [ 4, 2 ], [ 5, 6 ] ],
+  [ [ 3, 1 ], [ 4, 2 ], [ 5, 6 ] ],
   [ [ 1, 2 ], [ 3, 6 ], [ 4, 5 ] ] ]
 
 // or with names supplied
 robin(6, ['clux', 'lockjaw', 'pibbz', 'xeno', 'e114', 'eclipse']);
 [ [ [ 'clux', 'eclipse' ], [ 'lockjaw', 'e114' ], [ 'pibbz', 'xeno' ] ],
-  [ [ 'clux', 'e114' ], [ 'eclipse', 'xeno' ], [ 'lockjaw', 'pibbz' ] ],
+  [ [ 'e114', 'clux' ], [ 'eclipse', 'xeno' ], [ 'lockjaw', 'pibbz' ] ],
   [ [ 'clux', 'xeno' ], [ 'e114', 'pibbz' ], [ 'eclipse', 'lockjaw' ] ],
-  [ [ 'clux', 'pibbz' ], [ 'xeno', 'lockjaw' ], [ 'e114', 'eclipse' ] ],
+  [ [ 'pibbz', 'clux', ], [ 'xeno', 'lockjaw' ], [ 'e114', 'eclipse' ] ],
   [ [ 'clux', 'lockjaw' ], [ 'pibbz', 'eclipse' ], [ 'xeno', 'e114' ] ] ]
 ```
+
+### Home/Away Matches
+In version `2.0.0` or greater, the outputted order of the match arrays denote which player is "home" or "away":
+```js
+[ 'away', 'home' ] // index 0 is away and index 1 is home
+```
+This can be used to indicate home/away in sports, white/black in chess, etc.
 
 ## Installation
 Install from npm:

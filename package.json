@@ -2,7 +2,7 @@
   "name": "roundrobin",
   "description": "A round-robin scheduler used in different tournaments",
   "author": "Eirik Albrigtsen <sszynrae@gmail.com>",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "clux/roundrobin"
@@ -18,11 +18,10 @@
     "precoverage": "istanbul cover bndg test/*.test.js",
     "coverage": "cat coverage/lcov.info && rm -rf coverage"
   },
-  "dependencies": {},
   "devDependencies": {
     "bandage": "^0.4.0",
-    "istanbul": "^0.4.1",
-    "interlude": "~1.0.2"
+    "interlude": "~1.0.2",
+    "istanbul": "^0.4.1"
   },
   "bugs": {
     "url": "http://github.com/clux/roundrobin/issues"
